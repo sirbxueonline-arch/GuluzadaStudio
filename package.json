@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Premium marketing website for Guluzada Studio",
   "scripts": {
-    "start": "serve ."
+    "start": "serve .",
+    "build": "node build.js"
   },
   "devDependencies": {
     "serve": "^14.2.1"
