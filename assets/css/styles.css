@@ -96,7 +96,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: auto; /* Standard scroll behavior */
     height: auto;
     min-height: 100vh;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -230,8 +230,8 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(15, 15, 17, 0.8);
-    backdrop-filter: blur(10px);
+    background-color: rgba(15, 15, 17, 0.95);
+    /* backdrop-filter: blur(10px); Removed to prevent scroll flicker */
     border-bottom: 1px solid rgba(255,255,255,0.05);
     transition: var(--transition);
 }
