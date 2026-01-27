@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guluzada Studio | Premium Web Design & Development</title>
+    <meta name="description" content="Guluzada Studio - Elevating brands through premium digital experiences. Specialist in high-converting, aesthetically stunning websites.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Guluzada Studio | Premium Web Design & Development">
+    <meta property="og:description" content="I help ambitious businesses turn visitors into customers with websites that look stunning and perform flawlessly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guluzada.uk">
+    <meta property="og:image" content="https://guluzada.uk/assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/logo-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">guluzada<span>.</span></div>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                guluzada<span>STUDIO</span><span class="dot">.</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+                <a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
+                <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+                <button id="lang-toggle" class="nav-link">AZ</button>
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-sun"></i> <!-- Default to Sun (since we start in dark mode, button switches TO light) wait, actually icon should represent current state or target? Usually current state representation so user knows what to click. Let's stick to script logic. -->
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div id="particles-js"></div> <!-- Particles Container -->
+        <div class="hero-bg-glow"></div>
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <h1 data-i18n="hero.title">Elevating Brands Through Premium Digital Experiences<span style="color:var(--color-primary)">.</span></h1>
+                <p data-i18n="hero.subtitle">I help ambitious businesses turn visitors into customers with websites that look stunning and perform flawlessly.</p>
+                <div class="flex gap-sm" style="margin-top: 2rem;">
+                    <a href="portfolio.html" class="btn btn-primary magnetic-btn" data-i18n="hero.cta.projects">View Projects</a>
+                    <a href="services.html" class="btn btn-secondary magnetic-btn" data-i18n="hero.cta.services">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="section-padding" style="background-color: var(--color-bg-alt)">
+        <div class="container">
+            <h2 class="text-center fade-in-up" data-i18n="services.title">What We Do</h2>
+            <div class="grid grid-services" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: var(--spacing-lg);">
+                <div class="card service-card fade-in-up">
+                    <i class="fas fa-layer-group" style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h3 data-i18n="service.uiux.title">UI/UX Design</h3>
+                    <p data-i18n="service.uiux.desc">Intuitive, user-centric interfaces that guide visitors toward conversion. We design for impact.</p>
+                </div>
+                <div class="card service-card fade-in-up">
+                    <i class="fas fa-code" style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h3 data-i18n="service.dev.title">Web Development</h3>
+                    <p data-i18n="service.dev.desc">Rock-solid code using modern frameworks. Fast, secure, and scalable solutions.</p>
+                </div>
+                <div class="card service-card fade-in-up">
+                    <i class="fas fa-fingerprint" style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+                    <h3 data-i18n="service.brand.title">Brand Identity</h3>
+                    <p data-i18n="service.brand.desc">Cohesive visual systems that tell your story and resonate with your audience.</p>
+                </div>
+            </div>
+            <div class="text-center fade-in-up" style="margin-top: var(--spacing-lg);">
+                <a href="services.html" class="btn btn-secondary magnetic-btn" data-i18n="services.cta">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center fade-in-up" data-i18n="work.title">Selected Work</h2>
+            <div style="margin-top: var(--spacing-lg);">
+                 <!-- Project 1 -->
+                <div class="project-card fade-in-up" style="margin-bottom: var(--spacing-lg);">
+                    <div class="project-info">
+                        <h3>Primerentacar.az</h3>
+                        <div class="project-tags">
+                            <span class="tag">UI/UX Design</span>
+                            <span class="tag">Development</span>
+                        </div>
+                        <p data-i18n="work.primerentacar.desc">A seamless car rental booking platform with fleet gallery.</p>
+                        <a href="https://primerentacar.az" target="_blank" class="btn btn-primary magnetic-btn" style="margin-top: 1rem;" data-i18n="work.cta.view_live">Visit Live Site</a>
+                    </div>
+                </div>
+                 <!-- Project 2 -->
+                <div class="project-card fade-in-up" style="margin-bottom: var(--spacing-lg);">
+                    <div class="project-info">
+                        <h3>Alcipan Baku</h3>
+                        <div class="project-tags">
+                            <span class="tag">Construction</span>
+                            <span class="tag">Corporate</span>
+                        </div>
+                        <p data-i18n="work.alcipan.desc">Leading drywall and renovation services provider in Baku.</p>
+                         <a href="https://alcipanbaku.com" target="_blank" class="btn btn-secondary magnetic-btn" style="margin-top: 1rem;" data-i18n="work.cta.view">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+             <div class="text-center fade-in-up">
+                <a href="portfolio.html" class="btn btn-secondary magnetic-btn" data-i18n="work.cta.all">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding" style="background-color: var(--color-primary); color: white; text-align: center;">
+        <div class="container fade-in-up">
+            <h2 style="margin-bottom: 1rem;" data-i18n="cta.title">Ready to elevate your digital presence?</h2>
+            <p style="margin-bottom: 2rem; color: rgba(255,255,255,0.9);" data-i18n="cta.subtitle">Let's discuss how we can help you reach your goals.</p>
+            <a href="contact.html" class="btn" style="background-color: white; color: var(--color-primary); border: none; padding: 1rem 2rem; font-weight: 600; border-radius: var(--radius-sm);" data-i18n="cta.button">Start a Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="logo">guluzada<span>STUDIO</span><span class="dot">.</span></a>
+                    <p style="max-width: 300px; margin-top: 1rem;" data-i18n="footer.tagline">Premium digital experiences for ambitious brands.</p>
+                </div>
+                <div>
+                    <h4 data-i18n="footer.nav">Navigation</h4>
+                    <ul style="opacity: 0.8; line-height: 2;">
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <ul style="opacity: 0.8; line-height: 2;">
+                        <li><a href="mailto:kaan.guluzada@gmail.com">kaan.guluzada@gmail.com</a></li>
+                        <li>Remote / Global</li>
+                    </ul>
+                     <div style="margin-top: 1rem;">
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright" data-i18n="footer.rights">
+                &copy; 2026 Guluzada Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

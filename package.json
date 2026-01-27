@@ -1,0 +1,11 @@
+{
+  "name": "guluzada-studio",
+  "version": "1.0.0",
+  "description": "Premium marketing website for Guluzada Studio",
+  "scripts": {
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

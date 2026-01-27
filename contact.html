@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Guluzada Studio</title>
+    <meta name="description" content="Start your project with Guluzada Studio. Let's build something exceptional together.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/logo-icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">guluzada<span>.</span></div>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                guluzada<span>STUDIO</span><span class="dot">.</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+                <a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
+                <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+                <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
+                <button id="lang-toggle" class="nav-link">AZ</button>
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="section-padding" style="padding-top: calc(var(--header-height) + 4rem);">
+        <div class="container text-center fade-in-up">
+            <h1 data-i18n="contact.intro.title">Let's Start a Project<span style="color:var(--color-primary)">.</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--color-text-muted);" data-i18n="contact.intro.subtitle">Tell us about your goals, and we'll tell you how we can help. No hard sales, just honest advice.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="container">
+            <div class="grid contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 4rem; align-items: start;">
+                
+                <!-- Left: Info -->
+                <div class="fade-in-up">
+                    <h2 style="margin-bottom: var(--spacing-md); font-size: 2rem;" data-i18n="contact.info.title">Contact Info</h2>
+                    <p style="margin-bottom: 2rem; opacity: 0.8;" data-i18n="contact.info.desc">We are always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                    
+                    <ul class="contact-list" style="font-size: 1.1rem; line-height: 2.5; list-style: none; padding: 0;">
+                        <li>
+                            <i class="fas fa-envelope" style="width: 24px; color: var(--color-primary)"></i> 
+                            <a href="mailto:kaan.guluzada@gmail.com" class="hover-link">kaan.guluzada@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt" style="width: 24px; color: var(--color-primary)"></i> 
+                            Remote / Global
+                        </li>
+                        <li>
+                            <i class="fas fa-clock" style="width: 24px; color: var(--color-primary)"></i> 
+                            Mon-Fri, 9am - 6pm
+                        </li>
+                    </ul>
+
+                    <div style="margin-top: 3rem;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Follow Us</h3>
+                        <div style="display: flex; gap: 1.5rem;">
+                            <a href="#" class="social-link" style="font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link" style="font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="contact-form-wrapper fade-in-up" style="transition-delay: 0.2s; background: var(--color-bg); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label" data-i18n="form.name">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label" data-i18n="form.email">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="service" class="form-label" data-i18n="form.service">Service Interested In</label>
+                            <select id="service" name="service" class="form-input">
+                                <option value="web-design" data-i18n="form.service.webdesign">Web Design</option>
+                                <option value="development" data-i18n="form.service.development">Web Development</option>
+                                <option value="branding" data-i18n="form.service.branding">Brand Identity</option>
+                                <option value="other" data-i18n="form.service.other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label" data-i18n="form.message">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary magnetic-btn" style="width: 100%; margin-top: 1rem;" data-i18n="form.submit">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="index.html" class="logo">guluzada<span>STUDIO</span><span class="dot">.</span></a>
+                    <p style="max-width: 300px; margin-top: 1rem;" data-i18n="footer.tagline">Premium digital experiences for ambitious brands.</p>
+                </div>
+                <div>
+                    <h4 data-i18n="footer.nav">Navigation</h4>
+                    <ul style="opacity: 0.8; line-height: 2;">
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <ul style="opacity: 0.8; line-height: 2;">
+                        <li><a href="mailto:kaan.guluzada@gmail.com">kaan.guluzada@gmail.com</a></li>
+                        <li>Remote / Global</li>
+                    </ul>
+                     <div style="margin-top: 1rem;">
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="margin-right: 1rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright" data-i18n="footer.rights">
+                &copy; 2026 Guluzada Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/config.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            if (typeof CONFIG !== 'undefined') {
+                emailjs.init(CONFIG.EMAILJS_PUBLIC_KEY);
+            } else {
+                console.error("Config not found!");
+            }
+        })();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
