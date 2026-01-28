@@ -327,12 +327,14 @@ img {
     max-width: 800px;
     position: relative;
     z-index: 10;
+    will-change: transform;
 }
 
 .hero h1 {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-muted) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: var(--spacing-md);
 }
@@ -346,6 +348,7 @@ img {
     background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, rgba(0,0,0,0) 70%);
     z-index: 1;
     pointer-events: none;
+    will-change: transform;
 }
 
 /* Trust Bar */

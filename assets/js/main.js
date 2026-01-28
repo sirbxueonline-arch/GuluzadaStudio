@@ -161,16 +161,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroGlow = document.querySelector('.hero-bg-glow');
 
     if (hero && heroContent && heroGlow) {
+        let rafId = null;
+        
         hero.addEventListener('mousemove', (e) => {
-            const x = (window.innerWidth - e.pageX * 2) / 100;
-            const y = (window.innerHeight - e.pageY * 2) / 100;
+             if (rafId) return;
 
-            heroContent.style.transform = `translateY(${y * 0.5}px)`; // Gentle content move
-            heroGlow.style.transform = `translate(${x * 2}px, ${y * 2}px)`; // More pronounced glow move
+             rafId = requestAnimationFrame(() => {
+                const x = (window.innerWidth - e.pageX * 2) / 100;
+                const y = (window.innerHeight - e.pageY * 2) / 100;
+
+                heroContent.style.transform = `translateY(${y * 0.5}px)`; // Gentle content move
+                heroGlow.style.transform = `translate(${x * 2}px, ${y * 2}px)`; // More pronounced glow move
+                
+                rafId = null;
+             });
         });
         
         // Reset on mouse leave
         hero.addEventListener('mouseleave', () => {
+             if (rafId) {
+                 cancelAnimationFrame(rafId);
+                 rafId = null;
+             }
              heroContent.style.transform = 'translateY(0)';
              heroGlow.style.transform = 'translate(0, 0)';
         });
