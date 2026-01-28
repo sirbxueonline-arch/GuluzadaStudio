@@ -170,8 +170,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const x = (window.innerWidth - e.pageX * 2) / 100;
                 const y = (window.innerHeight - e.pageY * 2) / 100;
 
-                heroContent.style.transform = `translateY(${y * 0.5}px)`; // Gentle content move
-                heroGlow.style.transform = `translate(${x * 2}px, ${y * 2}px)`; // More pronounced glow move
+                // Disable transition during movement to prevent flickering (fight between CSS transition and JS frame update)
+                heroContent.style.transition = 'none';
+                heroGlow.style.transition = 'none';
+
+                heroContent.style.transform = `translateY(${y * 0.5}px)`; 
+                heroGlow.style.transform = `translate(${x * 2}px, ${y * 2}px)`; 
                 
                 rafId = null;
              });
@@ -183,8 +187,19 @@ document.addEventListener('DOMContentLoaded', () => {
                  cancelAnimationFrame(rafId);
                  rafId = null;
              }
+             
+             // Restore transition for smooth return
+             heroContent.style.transition = 'transform 0.5s ease';
+             heroGlow.style.transition = 'transform 0.5s ease';
+             
              heroContent.style.transform = 'translateY(0)';
              heroGlow.style.transform = 'translate(0, 0)';
+             
+             // Clean up inline transition after it finishes to return to stylesheet defaults (optional but good practice)
+             setTimeout(() => {
+                 heroContent.style.transition = '';
+                 heroGlow.style.transition = '';
+             }, 500);
         });
     }
 
