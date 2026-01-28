@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guluzada Watermark</title>
+</head>
+<body style="background-color: #0f0f11; padding: 50px; display: flex; justify-content: center; align-items: center; height: 100vh;">
+
+    <!-- 
+        GULUZADA STUDIO WATERMARK SNIPPET
+        Copy the CSS and HTML below to add to your projects.
+    -->
+
+    <!-- 1. CSS STYLES (Add to your stylesheet or <style> tag) -->
+    <style>
+        .guluzada-watermark {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.03); /* Subtle glass effect */
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 99px;
+            text-decoration: none !important; /* Force no underline */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-size: 13px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            cursor: pointer;
+        }
+
+        .guluzada-watermark:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(99, 102, 241, 0.4); /* Primary Color Highlight */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.15);
+        }
+
+        .guluzada-label {
+            color: #94a3b8; /* Muted text */
+            font-weight: 400;
+        }
+
+        .guluzada-logo {
+            font-weight: 600;
+            color: #f8fafc; /* White/Light text */
+            letter-spacing: -0.01em;
+        }
+        
+        .guluzada-dot {
+            color: #6366f1; /* Accent Color */
+            font-weight: 700;
+        }
+
+        /* Light Mode Support (Optional) */
+        @media (prefers-color-scheme: light) {
+            .guluzada-watermark {
+                background: rgba(0, 0, 0, 0.03);
+                border-color: rgba(0, 0, 0, 0.08);
+            }
+            .guluzada-watermark:hover {
+                background: rgba(0, 0, 0, 0.05);
+            }
+            .guluzada-label { color: #64748b; }
+            .guluzada-logo { color: #0f172a; }
+        }
+    </style>
+
+    <!-- 2. HTML ELEMENT (Paste this where you want the watermark) -->
+    <a href="https://guluzada.dev" target="_blank" rel="noopener noreferrer" class="guluzada-watermark">
+        <span class="guluzada-label">Designed by</span>
+        <span class="guluzada-logo">Guluzada Studio<span class="guluzada-dot">.</span></span>
+    </a>
+
+</body>
+</html>
