@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Developer Portfolio Website | Custom Web Apps</title>
-    <meta name="description" content="View my professional software developer portfolio. Case studies in web development, MVP creation, and SaaS products. See the quality of code I deliver.">
+    <title>Software Engineering Articles & Insights | Guluzada Studio</title>
+    <meta name="description" content="Insights on web application development, startup tech stacks, and hiring software developers. Expert advice for building scalable digital products.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="public/logo-icon.png">
@@ -49,7 +49,7 @@
                 <a href="/services" class="nav-link" data-i18n="nav.services">Services</a>
                 <a href="/portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
                 <a href="/about" class="nav-link" data-i18n="nav.about">About</a>
-                <a href="/articles" class="nav-link" data-i18n="nav.articles">Articles</a>
+                <a href="/articles" class="nav-link active" data-i18n="nav.articles">Articles</a>
                 <a href="/contact" class="nav-link" data-i18n="nav.contact">Contact</a>
                 <button id="lang-toggle" class="nav-link">AZ</button>
                 <button class="theme-toggle" aria-label="Toggle Dark Mode">
@@ -61,98 +61,38 @@
 
     <!-- Header Section -->
     <header class="section-padding" style="padding-top: calc(var(--header-height) + 4rem);">
-         <div id="particles-js" style="height: 40vh;"></div>
+         <div id="particles-js" style="height: 50vh;"></div>
          <div class="container text-center fade-in-up">
-             <h1 class="text-gradient" data-i18n="work.header.title">Selected Works</h1>
-             <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;" data-i18n="work.header.subtitle">A showcase of digital craftsmanship and results.</p>
+             <h1 class="text-gradient">Insights & Resources</h1>
+             <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">
+                Thoughts on software architecture, MVP development, and scaling digital products.
+             </p>
          </div>
     </header>
 
-    <div class="container">
-        <!-- Project 1 -->
-        <div class="project-card fade-in-up" style="margin-bottom: var(--spacing-lg);">
-            <!-- Image placeholder would go here -->
-            <div class="project-info">
-                <h3>Primerentacar.az</h3>
-                <div class="project-tags">
-                    <span class="tag">UI/UX Design</span>
-                    <span class="tag">Development</span>
-                </div>
-                <p data-i18n="work.primerentacar.desc">A seamless car rental booking platform with fleet gallery.</p>
-                
-                <h4 style="margin-top: 1rem;" data-i18n="work.role">Role</h4>
-                <p>Lead Designer & Developer</p>
-                
-                <h4 style="margin-top: 1rem;" data-i18n="work.highlights">Highlights</h4>
-                <ul style="list-style: disc; margin-left: 20px; color: var(--color-text-muted);">
-                    <li>Custom booking engine</li>
-                    <li>Mobile-optimized fleet grid</li>
-                    <li>Fast load times</li>
-                </ul>
-
-                <a href="https://primerentacar.az" target="_blank" class="btn btn-primary magnetic-btn" style="margin-top: 1.5rem;" data-i18n="work.cta.view_live">Visit Live Site</a>
+    <!-- Articles List -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <!-- Article Card 1 -->
+                <article class="card fade-in-up" onclick="window.location.href='/articles/hiring-software-developer'" style="cursor: pointer; transition: transform 0.3s ease;">
+                    <div style="margin-bottom: 1rem; color: var(--color-primary); font-size: 0.875rem; font-weight: 600;">Hiring Guide</div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">How to Hire a Software Developer for Your Startup (2026 Guide)</h2>
+                    <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">
+                        Finding the right tech partner is critical. Learn the difference between freelance developers and agencies, specifically for building MVPs.
+                    </p>
+                    <a href="/articles/hiring-software-developer" style="color: var(--color-primary); font-weight: 500;">Read Article →</a>
+                </article>
             </div>
         </div>
-
-        <!-- Project 2 -->
-        <div class="project-card fade-in-up" style="margin-bottom: var(--spacing-lg);">
-            <div class="project-info">
-                <h3>Spinabifida.az</h3>
-                <div class="project-tags">
-                    <span class="tag">Non-Profit</span>
-                    <span class="tag">Accessibility</span>
-                </div>
-                <p data-i18n="work.spinabifida.desc">Official association website with multilingual support.</p>
-                 <a href="https://spinabifida.az" target="_blank" class="btn btn-secondary magnetic-btn" style="margin-top: 1rem;" data-i18n="work.cta.view">Visit Site</a>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card fade-in-up" style="margin-bottom: var(--spacing-lg);">
-            <div class="project-info">
-                <h3>Foundrr.site</h3>
-                <div class="project-tags">
-                    <span class="tag">SaaS Landing</span>
-                    <span class="tag">Conversion</span>
-                </div>
-                <p data-i18n="work.foundrr_site.desc">High-conversion waiting list page for a new SaaS.</p>
-                 <a href="https://foundrr.site" target="_blank" class="btn btn-secondary magnetic-btn" style="margin-top: 1rem;" data-i18n="work.cta.view">Visit Site</a>
-            </div>
-        </div>
-
-        <!-- Project 4 -->
-         <div class="project-card fade-in-up" style="margin-bottom: var(--spacing-lg);">
-            <div class="project-info">
-                <h3>Foundrr.online</h3>
-                <div class="project-tags">
-                    <span class="tag">Digital Platform</span>
-                    <span class="tag">Animations</span>
-                </div>
-                <p data-i18n="work.foundrr_online.desc">Comprehensive digital platform for entrepreneurs.</p>
-                 <a href="https://foundrr.online" target="_blank" class="btn btn-secondary magnetic-btn" style="margin-top: 1rem;" data-i18n="work.cta.view">Visit Site</a>
-            </div>
-        </div>
-
-        <!-- Project 5 -->
-         <div class="project-card fade-in-up" style="margin-bottom: var(--spacing-lg);">
-            <div class="project-info">
-                <h3>Alcipan Baku</h3>
-                <div class="project-tags">
-                    <span class="tag">Construction</span>
-                    <span class="tag">Corporate</span>
-                </div>
-                <p data-i18n="work.alcipan.desc">Leading drywall and renovation services provider in Baku. Professional showcase with service details.</p>
-                 <a href="https://alcipanbaku.com" target="_blank" class="btn btn-secondary magnetic-btn" style="margin-top: 1rem;" data-i18n="work.cta.view">Visit Site</a>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <!-- CTA -->
     <section class="section-padding" style="text-align: center; margin-top: var(--spacing-xl);">
         <div class="container fade-in-up">
-            <h2 data-i18n="services.cta.full">Start Your Project</h2>
-            <p data-i18n="services.cta.subtitle">Ready to move forward?</p>
-            <a href="/contact" class="btn btn-primary magnetic-btn" data-i18n="services.cta.btn">Get in Touch</a>
+            <h2>Need Specific Advice?</h2>
+            <p style="margin-bottom: 2rem; color: var(--color-text-muted);">I offer consultation for startups looking to plan their technical roadmap.</p>
+            <a href="/contact" class="btn btn-primary magnetic-btn">Book a Consultation</a>
         </div>
     </section>
 
@@ -199,7 +139,6 @@
     <script defer src="/_vercel/insights/script.js"></script>
 
     <!-- Scripts -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="assets/js/translations.js"></script>
